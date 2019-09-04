@@ -13,31 +13,36 @@ export const RegisterStruct = t.struct ({
 export const RegisterOptions ={
     fields:{
         name:{
-            label:"Nombre (*)",
-            placeHolder: "Nombre(s) y Apellido(s)",
-            error: "Nombre Invalido" 
+            template: inputTemplate,
+            config: {
+                placeHolder: "Nombre(s) y Apellido(s)"
+            }
 
 
         },
         email:{
-            label: "Email(*)",
-            placeHolder: "TuEmail@Algo.com",
-            error:"Email Invalido", 
+            template: inputTemplate,
+            config: {
+            placeHolder: "TuEmail@Algo.com"
+            }
             
         },
         password:{
-            label:"Constraseña (*)",
-            placeHolder:"Constraseña",
-            error: "Contraseña Invalida",
-            password:true,
-            secureTextEntry: true
+            template: inputTemplate,
+            config: {
+                placeHolder: "Constraseña",
+                password:true,
+                secureTextEntry: true
+                }
+            
         },
         passwordConfirmation:{
-            label: "Repetir Contraseña (*)",
-            placeHolder: "Constraseña",
-            error: "Contraseña Invalida",
-            password:true,
-            secureTextEntry: true
+            template: inputTemplate,
+            config: {
+                placeHolder: "Constraseña",
+                password:true,
+                secureTextEntry: true
+                }
         }
     }
 }
