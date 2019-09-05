@@ -4,13 +4,17 @@ import {Input, Icon} from "react-native-elements";
 
 export default (inputTemplate = locals => {
    return ( 
-   <View> 
-    <Input  placeholder= "Hola" 
+   <View style={styles.viewContainer} > 
+    <Input  placeholder= {locals.config.placeHolder}
             password = {locals.config.password}
             secureTextEntry = {locals.config.secureTextEntry}
-        />
-    </View>
+    />
+    </ View>
     );
 });
 
-const styles =StyleSheet.create({}); 
+const styles = StyleSheet.create ({
+        viewContainer:{
+        marginBottom: 12,
+        marginTop:12}
+})
