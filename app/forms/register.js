@@ -9,7 +9,6 @@ export const RegisterStruct = t.struct ({
     password: formValidation.password,
     passwordConfirmation: formValidation.password
 });
-
 export const RegisterOptions = {
     fields:{
         name:{

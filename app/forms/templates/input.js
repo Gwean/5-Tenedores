@@ -8,11 +8,12 @@ export default (inputTemplate = locals => {
     <Input  placeholder= {locals.config.placeHolder}
             password = {locals.config.password}
             secureTextEntry = {locals.config.secureTextEntry}
+            rightIcon = {
+            <Icon name="user-circle" size={24} color="grey"/>}
     />
     </ View>
     );
 });
-
 const styles = StyleSheet.create ({
         viewContainer:{
         marginBottom: 12,
