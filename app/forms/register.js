@@ -10,7 +10,7 @@ export const RegisterStruct = t.struct ({
     passwordConfirmation: formValidation.password
 });
 
-export const RegisterOptions ={
+export const RegisterOptions = {
     fields:{
         name:{
             template: inputTemplate,
@@ -18,8 +18,8 @@ export const RegisterOptions ={
                 placeHolder: "Nombre(s) y Apellido(s)"
             }
 
-
         },
+
         email:{
             template: inputTemplate,
             config: {
@@ -27,6 +27,7 @@ export const RegisterOptions ={
             }
             
         },
+
         password:{
             template: inputTemplate,
             config: {
@@ -36,10 +37,11 @@ export const RegisterOptions ={
                 }
             
         },
+        
         passwordConfirmation:{
             template: inputTemplate,
             config: {
-                placeHolder: "Constraseña",
+                placeHolder: "Repita Constraseña",
                 password:true,
                 secureTextEntry: true
                 }
