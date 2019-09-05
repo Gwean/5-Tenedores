@@ -14,7 +14,9 @@ export const RegisterOptions = {
         name:{
             template: inputTemplate,
             config: {
-                placeHolder: "Nombre(s) y Apellido(s)"
+                placeHolder: "Nombre(s) y Apellido(s)",
+                iconName: "user-circle",
+                iconType:"font-awesome"
             }
 
         },
@@ -22,7 +24,9 @@ export const RegisterOptions = {
         email:{
             template: inputTemplate,
             config: {
-            placeHolder: "TuEmail@Algo.com"
+            placeHolder: "TuEmail@Algo.com",
+            iconName: "envelope",
+            iconType:"font-awesome"
             }
             
         },
@@ -32,7 +36,9 @@ export const RegisterOptions = {
             config: {
                 placeHolder: "Constraseña",
                 password:true,
-                secureTextEntry: true
+                secureTextEntry: true,
+                iconName: "lock",
+                iconType:"font-awesome"
                 }
             
         },
@@ -42,7 +48,9 @@ export const RegisterOptions = {
             config: {
                 placeHolder: "Repita Constraseña",
                 password:true,
-                secureTextEntry: true
+                secureTextEntry: true,
+                iconName: "lock",
+                iconType:"font-awesome"
                 }
         }
     }

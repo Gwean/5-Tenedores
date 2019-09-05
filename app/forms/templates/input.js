@@ -9,7 +9,10 @@ export default (inputTemplate = locals => {
             password = {locals.config.password}
             secureTextEntry = {locals.config.secureTextEntry}
             rightIcon = {
-            <Icon name="user-circle" size={24} color="grey"/>}
+            <Icon type={locals.config.iconType} 
+                  name={locals.config.iconName}
+                  size={24}
+                  color="#B3B3B3"/>}
     />
     </ View>
     );
