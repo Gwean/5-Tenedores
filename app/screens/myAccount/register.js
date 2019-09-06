@@ -1,9 +1,9 @@
 import React, {Component} from "react"; 
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import t from "tcomb-form-native";
 const Form = t.form.Form;
 import {RegisterStruct, RegisterOptions} from "../../forms/register";
-import {Button} from "react-native-elements";
+import {Button, Text} from "react-native-elements";
 export default class Register extends Component {
    
     constructor (){
@@ -15,7 +15,8 @@ export default class Register extends Component {
             email: "",
             password: "", 
             passwordConfirmation: ""
-            }
+            },
+            formErrorMessage: "Error"
         };
     }
 
@@ -40,6 +41,7 @@ export default class Register extends Component {
         console.log(this.state.formData);
     }
     render(){
+        const {formErrorMessage} = this.state;
 
         return (
             <View style={styles.viewBody}>
@@ -50,7 +52,13 @@ export default class Register extends Component {
                 value= {this.state.formData}
                 onChange= {(formValue) => this.onChangeFormRegister(formValue)}
                 />
-                <Button title="Unirse" onPress= {() =>this.register() }/>
+                <Button 
+                buttonStyle={styles.buttonRegisterContainer}
+                title="Unirse" 
+                onPress= {() =>this.register() }/>
+                <Text>
+                    {formErrorMessage}
+                </Text>
             </View>
         );
     }
@@ -62,5 +70,11 @@ const styles = StyleSheet.create ({
         marginLeft:40,
         marginRight:40,
         justifyContent:'center'
+    },
+    buttonRegisterContainer :{
+        backgroundColor: "#00a680",
+        marginTop: 20,
+        marginLeft: 10,
+        marginRight: 10
     }
 })
